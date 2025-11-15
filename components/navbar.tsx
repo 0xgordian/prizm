@@ -1,8 +1,4 @@
-import { FaXTwitter } from "react-icons/fa6";
-import { Button } from "./ui/button";
-import { FaGithub } from "react-icons/fa6";
 import { ModeToggle } from "./mode-toggle";
-import Link from "next/link";
 import { Palette } from "lucide-react";
 
 export const Navbar = () => {

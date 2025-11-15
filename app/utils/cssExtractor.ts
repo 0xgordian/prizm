@@ -1,10 +1,5 @@
 import { isValidColor } from "colorizr";
 
-interface ExtractedColor {
-  color: string;
-  count: number;
-}
-
 // CSS color patterns to match different color formats
 const COLOR_PATTERNS = [
   // Hex colors (3, 4, 6, 8 digits)

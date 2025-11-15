@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "motion/react";
 import { toast } from "sonner";
 import { useColorStore } from "@/app/store/colorStore";
@@ -117,7 +117,7 @@ export function URLExtractor() {
     }
   };
 
-  const setUploadedImage = (image: string) => {
+  const setUploadedImage = () => {
     // Set uploaded image URL for display
     // You could add state for this if needed
   };

@@ -68,7 +68,7 @@ export const useColorStore = create<ColorState>((set) => ({
         }
         return { colors: [...state.colors, normalizedColor], currentColor: "" };
       });
-    } catch (_error) {
+    } catch {
       toast.error("Please enter a valid color code");
     }
   },

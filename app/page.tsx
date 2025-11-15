@@ -154,7 +154,7 @@ export default function Home() {
 
       setGeneratedColors(generated);
       setGeneratorModal({ isOpen: true, type, baseColor: color });
-    } catch (error) {
+    } catch {
       toast.error(`Failed to generate ${type}`);
     }
   };
@@ -162,7 +162,7 @@ export default function Home() {
   const getSimulatedColor = (color: string) => {
     if (blindnessType === "normal") return color;
     try {
-      return (colorBlind as any)[blindnessType](color);
+      return (colorBlind as unknown as Record<string, (color: string) => string>)[blindnessType](color);
     } catch (error) {
       console.error("Error simulating color blindness:", error);
       return color;

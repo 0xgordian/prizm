@@ -86,7 +86,7 @@ export const generateAdvancedCssVariables = (
         // Use formatCSS for RGB/HSL
         const parsed = parseCSS(color, format);
         if (typeof parsed === "object") {
-          const formatOptions: any = { format };
+          const formatOptions: { format: "hex" | "rgb" | "hsl" | "oklch"; legacy?: boolean; alpha?: number } = { format };
 
           // Modern syntax uses spaces instead of commas
           if (useModernSyntax) {
